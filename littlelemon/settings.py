@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'djoser',
     'rest_framework.authtoken',
 ]
-f
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
