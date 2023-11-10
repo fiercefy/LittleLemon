@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'restaurant',
     'djoser',
+    'rest_framework.authtoken',
 ]
-
+f
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -131,6 +132,18 @@ STATIC_URL = 'restaurant/static/'
 STATICFILES_DIRS = [
     "restaurant/static",
 ]
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
+    ],
+}
 
 DJOSER={"USER_ID_FIELD":"username"}
 # Default primary key field type
