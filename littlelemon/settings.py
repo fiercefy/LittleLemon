@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # The settings for app updated for the Graded assessment
+    'rest_framework',
     'restaurant',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,7 @@ STATICFILES_DIRS = [
     "restaurant/static",
 ]
 
+DJOSER={"USER_ID_FIELD":"username"}
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
